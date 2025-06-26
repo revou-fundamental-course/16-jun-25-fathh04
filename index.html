@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kalkulator Segitiga</title>
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    
+    <header>
+        <h1>Selamat Datang di Kalkulator Segitiga</h1>
+        <p>Gunakan alat ini untuk menghitung <strong>luas</strong> dan <strong>keliling</strong> segitiga dengan mudah.</p>
+    </header>
+
+    <nav>
+        <button type="button" onclick="tampilkanForm('luas')">Luas Segitiga</button>
+        <button type="button" onclick="tampilkanForm('keliling')">Keliling Segitiga</button>
+    </nav>
+
+    <main>
+        <!-- Informasi rumus -->
+        <section>
+            <h2>Rumus Luas dan Keliling Segitiga</h2>
+            <img src="https://webpintar.com/wp-content/uploads/2018/03/Rumus-Luas-Segitiga.jpg" alt="Ilustrasi Rumus Segitiga"/>
+            <p><strong>Luas:</strong> L = 1/2 × a × t</p>
+            <p><strong>Keliling:</strong> K = a + b + c</p>
+        </section>
+
+        <!-- Form Luas -->
+        <section id="formLuas">
+            <h3>Hitung Luas Segitiga</h3>
+            <form id="formHitungLuas">
+                <label for="alas">Panjang Alas (a):</label>
+                <input type="number" id="alas" required />
+
+                <label for="tinggi">Tinggi (t):</label>
+                <input type="number" id="tinggi" required />
+
+                <div id="hasilLuas"></div>
+
+                <div class="buttons">
+                    <button type="submit">Hitung</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Form Keliling -->
+        <section id="formKeliling" style="display: none;">
+            <h3>Hitung Keliling Segitiga</h3>
+            <form id="formHitungKeliling">
+                <label for="sisiA">Sisi A:</label>
+                <input type="number" id="sisiA" required />
+
+                <label for="sisiB">Sisi B:</label>
+                <input type="number" id="sisiB" required />
+
+                <label for="sisiC">Sisi C:</label>
+                <input type="number" id="sisiC" required />
+
+                <div id="hasilKeliling"></div>
+
+                <div class="buttons">
+                    <button type="submit">Hitung</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Kalkulator Segitiga oleh Andi
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
